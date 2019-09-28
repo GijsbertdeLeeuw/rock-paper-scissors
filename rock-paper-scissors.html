@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <style> </style>
+  </head>
+    <script>
+
+      const choices = ["rock", "paper", "scissors"];
+      let playerScore = 0;
+      let computerScore = 0;
+      let gameMessage;
+
+// Function to random select computer-Choice from Array
+      function computerPlay () {
+        let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+        return computerChoice;
+      }
+      
+
+// Function to play one round and determine win-loose and update-score.
+      function playRound(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection) {
+          gameMessage = ("it's a draw !"); 
+        }
+        if (playerSelection === "rock") {
+          if (computerSelection === "scissors") {
+            playerScore ++; 
+            gameMessage = ("You Win ! , Rock beats Scissors");
+          }
+          else {
+            computerScore ++;
+            gameMessage = ("You Loose ! , Paper beats Rock");
+          }
+        }
+        if (playerSelection === "paper") {
+          if(computerSelection === "rock") {
+            playerScore ++; 
+            gameMessage = ("You Win ! , Paper beats Rock");
+          }
+          else {
+            computerScore ++;
+            gameMessage = ("You Loose ! , Scissors beats Paper");
+          }  
+        } 
+        else if (playerSelection == "scissors") {
+          if(computerSelection == "paper") {
+            playerScore ++; 
+            gameMessage = ("You Win ! , Scissors beats Paper");
+          }
+          else {
+            computerScore ++;
+            gameMessage = ("You Loose ! , Rock beats Scissors");
+          }
+        } 
+      }
+
+// Function to play the game until 5 rounds won by player or computer      
+      function game() {
+        playRound(playerPlay(),computerPlay());
+        if (playerScore == 5) {
+          resetGame();
+          return ("Congratulations !, You won the Game ");
+        }
+        if (computerScore == 5) {
+          resetGame();
+          return ("Bad Luck !, You loose the Game ");
+        }
+        console.log(gameMessage);
+        console.log(playerScore + " " + computerScore);
+      }
+
+// Function to reset scores and start a new game
+      function resetGame() {
+        playerScore = 0;
+        computerScore = 0;
+      }
+
+// Function to collect players choice
+      function playerPlay() {
+        let playerChoice = prompt("What's Your Choice ?");
+        return (playerChoice.toLowerCase());
+      }
+
+     
+    </script>
+  </body>
+
+
