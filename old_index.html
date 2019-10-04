@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Page Title</title>
-    <style> </style>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
   </head>
-    <script>
 
+ <body></body>
+  
+  <script>
       const choices = ["rock", "paper", "scissors"];
       let playerScore = 0;
       let computerScore = 0;
       let gameMessage;
+
 
 // Function to random select computer-Choice from Array
       function computerPlay () {
@@ -21,57 +23,61 @@
 
 // Function to play one round and determine win-loose and update-score.
       function playRound(playerSelection, computerSelection) {
-        if (playerSelection === computerSelection) {
+        if (playerSelection == computerSelection) {
           gameMessage = ("it's a draw !"); 
         }
-        if (playerSelection === "rock") {
-          if (computerSelection === "scissors") {
+        else if (playerSelection == "rock") {
+          if (computerSelection == "scissors") {
             playerScore ++; 
-            gameMessage = ("You Win ! , Rock beats Scissors");
+            gameMessage = ("You Win ! , The Rock blunts the Scissors");
           }
           else {
             computerScore ++;
-            gameMessage = ("You Loose ! , Paper beats Rock");
+            gameMessage = ("You Loose ! , The Paper covers the Rock");
           }
         }
-        if (playerSelection === "paper") {
-          if(computerSelection === "rock") {
+        else if (playerSelection == "paper") {
+          if(computerSelection == "rock") {
             playerScore ++; 
-            gameMessage = ("You Win ! , Paper beats Rock");
+            gameMessage = ("You Win ! , The Paper covers the Rock");
           }
           else {
             computerScore ++;
-            gameMessage = ("You Loose ! , Scissors beats Paper");
+            gameMessage = ("You Loose ! , The Scissors cuts the Paper");
           }  
         } 
         else if (playerSelection == "scissors") {
           if(computerSelection == "paper") {
             playerScore ++; 
-            gameMessage = ("You Win ! , Scissors beats Paper");
+            gameMessage = ("You Win ! , The Scissors cuts the Paper");
           }
           else {
             computerScore ++;
-            gameMessage = ("You Loose ! , Rock beats Scissors");
+            gameMessage = ("You Loose ! , The Rock blunts the Scissors");
           }
-        } 
+        }
+        else {
+         gameMessage = ("Right Input is: Rock, Paper or Scissors !");
+        }
       }
 
 // Function to play the game until 5 rounds won by player or computer      
       function game() {
         playRound(playerPlay(),computerPlay());
-        if (playerScore == 5) {
-          resetGame();
-          return ("Congratulations !, You won the Game ");
-        }
-        if (computerScore == 5) {
-          resetGame();
-          return ("Bad Luck !, You loose the Game ");
-        }
+               
         console.log(gameMessage);
         console.log(playerScore + " " + computerScore);
+        
+        if (playerScore == 5) {
+          gameMessage = ("Congratulations !, You won the Game ");
+        }
+        if (computerScore == 5) {
+          gameMessage = ("Potluck !, Try another Game !");
+        }
+        resetGame()
       }
 
-// Function to reset scores and start a new game
+// Function to reset scores to start a new game
       function resetGame() {
         playerScore = 0;
         computerScore = 0;
@@ -83,8 +89,12 @@
         return (playerChoice.toLowerCase());
       }
 
-     
-    </script>
-  </body>
+
+
+  </script>  
+</html>
+
+
+
 
 
