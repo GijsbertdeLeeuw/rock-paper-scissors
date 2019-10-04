@@ -1,0 +1,159 @@
+
+html {
+  height: 100%;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-color: #3C3C3C;
+  color: #DCDCDC;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+  font-size: 2em;
+}
+
+header {
+}
+
+.header-container {
+  text-align: left;
+  font-size: .7em;
+}
+
+.about {  
+  width: 100px;
+  color: #3C3C3C; 
+}
+
+#about-tab:hover {
+  opacity: .5; 
+}
+
+main {
+}
+
+.image-container {
+  margin-top: 5px;
+}
+
+.row {
+  text-align: center;
+}
+
+.block {
+  width: 290px;
+  height: 150px;
+  background-color: #3C3C3C;
+  color: #3C3C3C;
+  border-width: 4px;
+  border-radius: 10px;
+  border-color: #787878;
+  border-style:solid;
+  margin: 2px;  
+  display: inline-block;
+  text-align: center; 
+}
+
+#rock-img {
+  background-image: url("../images/rock-player.png");
+}
+
+#paper-img {    
+  background-image: url("../images/paper-player.png");  
+}
+
+#scissors-img {
+  background-image: url("../images/scissors-player.png");
+}
+
+#rock-img:hover {
+  opacity: .5; 
+}
+
+#paper-img:hover {
+  opacity: .5; 
+}
+
+#scissors-img:hover {
+  opacity: .5; 
+}
+
+.score-container{
+  margin-top: 100px;
+}
+
+.left-score-container {
+  width: 300px;
+  height: 100px;
+  margin-left: 50px;
+  float: left;
+  text-align: center;
+  border-radius:10px;
+  border-width: 4px;
+  border-color: #787878;
+  border-style: solid;
+  color: #3C3C3C;
+  background-color: #FFFF;
+}
+
+.right-score-container {
+  width: 300px;
+  height: 100px;
+  margin-right: 50px;
+  float: right;
+  text-align: center;
+  border-radius:10px;
+  border-width: 4px;
+  border-color: #787878;
+  border-style: solid;
+  color: #3C3C3C;
+  background-color: #FFFF;
+}
+
+.score {
+  margin: 10px;
+  padding: 10px;    
+  font-size: 40px;
+  text-align: center;
+  color: #3C3C3C;
+}
+
+div.response-container {
+  margin-top: 330px;
+  visibility: hidden;
+}
+
+footer {
+  height: 50px;
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  bottom: 0;
+  font-size: 20px;
+  color: #3C3C3C;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+.message {
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************** HEADER ********************** */
