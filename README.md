@@ -12,12 +12,12 @@
 <li>Paper vs Paper: (as an example of the same choice) Let's call it a draw, neither player nor computer gets a point.</li>
 </ul>
 <hr />
-<h2>Tis is how it looks.</h2>
+<h2>This is how it looks.</h2>
 <p><img alt="game-image" title="Rock Paper Scissors" src="./images/game-image.png" /></p>
 <hr />
 <h2>Another level</h2>
-<p>At another level is this game a study case of<br />
- <a href="https://www.theodinproject.com/courses/web-development-101">"The Odin Project" course in web-development 101.></p>
+<p>At another level,this game is a study case of<br />
+ <a href="https://www.theodinproject.com/courses/web-development-101">"The Odin Project" course in web-development 101.></a></p>
 <p>I can highly recommend this course because it gives me all the freedom to show my creativity.</p> 
 <hr />
 <h2>Some more ....</h2>
@@ -31,4 +31,4 @@
 <li>Make a CHEAT mode: Computer still acts random on certain moves but with knowledge of player's choice.(with propability percentage)</li>
 </ul>
 
-<h2> Happy Programming </h2>
+<h2> Happy Programming ..... </h2>
